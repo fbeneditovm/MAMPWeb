@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GML Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="floating-panel">
+    <input onclick="generateGML();" type=button value="Generate">
+    <input onclick="removeLastPoint();" type=button value="Remove Last Point">
+    <input onclick="removeAllPoints();" type=button value="Remove All Points">
+</div>
+
+<div id="gml-modal" class ="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="gml-text" class="modal-content">
+        <p>GML</p>
+    </div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvCJhZPVEoHwHpK1YVcNsqseWZ1rVNkbE&callback=initMap&libraries=geometry" async defer></script>
+
+<script src="script.js"></script>
+</body>
+</html>
